@@ -32,18 +32,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onItemClicked(item: com.example.listuser.data.Result) {
 
-//                val fragment = ProfileFragment()
-//                //val bundel = Bundle()
-//                //bundel.putString("name",item.name.first)
-//                //ProfileFragment.getNewInstance(data = bundel)
-//               fragment.arguments?.putString("name","fdg")
-//                val fragmentManager = supportFragmentManager
-//                val fragmentTransaction = fragmentManager.beginTransaction()
-//                    fragmentTransaction.replace(R.id.conteiner,fragment)
-//                    fragmentTransaction.addToBackStack(null)
-//                    fragmentTransaction.commit()
-
-
 
                 val intent = Intent(applicationContext,ProfileActivity::class.java)
                 intent.putExtra("photoProfile",item.picture.large)
@@ -61,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         AndroidNetworking.initialize(this)
 
-        AndroidNetworking.get("https://randomuser.me/api/?results=1")
+        AndroidNetworking.get("https://randomuser.me/api/?results=20")
                 .build()
                 .getAsObject(DataUser::class.java, object : ParsedRequestListener<DataUser> {
                     override fun onResponse(response: DataUser) {

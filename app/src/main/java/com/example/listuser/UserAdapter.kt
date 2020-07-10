@@ -50,7 +50,7 @@ class UserAdapter(dataList: MutableList<Result>): RecyclerView.Adapter<UserAdapt
         @SuppressLint("SetTextI18n")
         fun bind(item: Result){
             itemView.textViewUserName.text = item.name.first +" " + item.name.last
-            Picasso.get().load(item.picture.medium).into(itemView.imageButtonUser)
+            Picasso.get().load(item.picture.medium).into(itemView.imageViewUser)
 
 //            itemView.imageButtonUser.setOnClickListener {
 //                item.let { it -> dataName.invoke(it) }

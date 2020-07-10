@@ -5,22 +5,29 @@
     android:layout_height="wrap_content"
     tools:context=".ProfileActivity">
 
-    <C
-        android:id="@+id/imageButtonUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
 
-    </C>
+        >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
     <TextView
         android:id="@+id/textViewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/imageButtonUser"
+        android:layout_toRightOf="@+id/imageViewUser"
         android:text="Name"
         android:textStyle="bold"
         android:textSize="20dp"
         android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
 
         />
 </RelativeLayout>
